@@ -1,2 +1,2 @@
 # angular-aurelia
-Comparison of Angular and Aurelia front end frameworks
+Sample project for comparison of Angular and Aurelia frameworks
