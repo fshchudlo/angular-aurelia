@@ -1,4 +1,4 @@
-System.register(['angular2/core', './testChildComponent'], function(exports_1) {
+System.register(['angular2/core'], function(exports_1) {
     var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
         var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
         if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -8,34 +8,28 @@ System.register(['angular2/core', './testChildComponent'], function(exports_1) {
     var __metadata = (this && this.__metadata) || function (k, v) {
         if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
     };
-    var core_1, testChildComponent_1;
-    var App;
+    var core_1;
+    var TestChildComponent;
     return {
         setters:[
             function (core_1_1) {
                 core_1 = core_1_1;
-            },
-            function (testChildComponent_1_1) {
-                testChildComponent_1 = testChildComponent_1_1;
             }],
         execute: function() {
-            App = (function () {
-                function App() {
-                    this.message = 'Welcome to Angular2!';
-                    this.messageForChild = 'Hello from child component!';
+            TestChildComponent = (function () {
+                function TestChildComponent() {
                 }
-                App = __decorate([
+                TestChildComponent = __decorate([
                     core_1.Component({
-                        selector: 'angular-app',
-                        template: '<h1>{{message}}</h1><test-child-component [inputMessage]="messageForChild"></test-child-component>',
-                        directives: [testChildComponent_1.TestChildComponent]
-                    }), 
+                        selector: 'test-child-component',
+                        inputs: ['inputMessage'],
+                        template: '<h3>{{inputMessage}}</h3>' }), 
                     __metadata('design:paramtypes', [])
-                ], App);
-                return App;
+                ], TestChildComponent);
+                return TestChildComponent;
             })();
-            exports_1("App", App);
+            exports_1("TestChildComponent", TestChildComponent);
         }
     }
 });
-//# sourceMappingURL=app.js.map
+//# sourceMappingURL=testChildComponent.js.map
