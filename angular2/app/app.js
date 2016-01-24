@@ -9,24 +9,24 @@ System.register(['angular2/core'], function(exports_1) {
         if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
     };
     var core_1;
-    var AppComponent;
+    var App;
     return {
         setters:[
             function (core_1_1) {
                 core_1 = core_1_1;
             }],
         execute: function() {
-            AppComponent = (function () {
-                function AppComponent() {
+            App = (function () {
+                function App() {
                     this.message = 'Welcome to Angular2!';
                 }
-                AppComponent = __decorate([
+                App = __decorate([
                     core_1.Component({ selector: 'angular-app', template: '<h1>{{message}}</h1>' }), 
                     __metadata('design:paramtypes', [])
-                ], AppComponent);
-                return AppComponent;
+                ], App);
+                return App;
             })();
-            exports_1("AppComponent", AppComponent);
+            exports_1("App", App);
         }
     }
 });

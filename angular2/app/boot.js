@@ -9,7 +9,7 @@ System.register(['angular2/platform/browser', './app'], function(exports_1) {
                 app_1 = app_1_1;
             }],
         execute: function() {
-            browser_1.bootstrap(app_1.AppComponent);
+            browser_1.bootstrap(app_1.App);
         }
     }
 });
