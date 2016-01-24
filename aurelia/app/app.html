@@ -1,7 +1,19 @@
 <template>
-    <h1>${message}</h1>
-    <compose model.bind="messageForChild" view-model="app/testChildComponent"></compose>
-    
-    <require from="app/test-custom-element.html"></require>
-    <test-custom-element message.bind="messageForCustomElement"></test-custom-element>
+<nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="#">Welcome to Aurelia!</a>
+        </div>
+        <div id="navbar" class="collapse navbar-collapse">
+            <ul class="nav navbar-nav">
+                <li repeat.for="row of router.navigation" class="${row.isActive ? 'active' : ''}">
+                    <a href.bind="row.href">${row.title}</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<div class="container">
+    <router-view></router-view>
+</div>
 </template>

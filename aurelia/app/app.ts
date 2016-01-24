@@ -1,5 +1,12 @@
 export class App {
     message: string = 'Welcome to Aurelia!';
-    messageForChild: string = 'Hello from child component!';
-    messageForCustomElement: string = 'Hello from custom element!';
+    router: any;
+    configureRouter(config, router) {
+        config.title = this.message;
+        config.map([
+            { route: ['', 'component-sample'], name: 'ComponentSample', moduleId: 'app/component-sample/component-sample', nav: true, title: 'Component sample' },
+            { route: 'component-sample', name: 'BindingSample', moduleId: 'app/binding-sample/binding-sample', nav: true, title: 'Binding sample' }
+        ]);
+        this.router = router;
+    }
 }

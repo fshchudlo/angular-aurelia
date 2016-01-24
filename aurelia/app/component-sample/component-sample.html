@@ -1,0 +1,7 @@
+<template>
+    <div class="sample-header"><h1>${message}</h1></div>
+    <compose model.bind="messageForChild" view-model="app/component-sample/testChildComponent"></compose>
+
+    <require from="app/component-sample/test-custom-element.html"></require>
+    <test-custom-element message.bind="messageForCustomElement"></test-custom-element>
+</template>

@@ -9,27 +9,27 @@ System.register(['angular2/core'], function(exports_1) {
         if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
     };
     var core_1;
-    var BindingSamples;
+    var BindingSample;
     return {
         setters:[
             function (core_1_1) {
                 core_1 = core_1_1;
             }],
         execute: function() {
-            BindingSamples = (function () {
-                function BindingSamples() {
+            BindingSample = (function () {
+                function BindingSample() {
                 }
-                BindingSamples = __decorate([
+                BindingSample = __decorate([
                     core_1.Component({
                         selector: 'test-child-component',
                         inputs: ['inputMessage'],
                         template: '<h3>Hello from binding samples!</h3>' }), 
                     __metadata('design:paramtypes', [])
-                ], BindingSamples);
-                return BindingSamples;
+                ], BindingSample);
+                return BindingSample;
             })();
-            exports_1("BindingSamples", BindingSamples);
+            exports_1("BindingSample", BindingSample);
         }
     }
 });
-//# sourceMappingURL=binding-samples.js.map
+//# sourceMappingURL=binding-sample.js.map

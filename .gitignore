@@ -2,5 +2,5 @@
 /aurelia/jspm_packages
 /aurelia/node_modules
 /angular2/node_modules
-/angular2/app/*.js
-/angular2/app/*.js.map
+/angular2/app/**/*.js
+/angular2/app/**/*.js.map
