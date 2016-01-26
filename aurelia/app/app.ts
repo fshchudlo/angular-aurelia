@@ -1,4 +1,5 @@
 export class App {
+    message: string = "Welcome to Aurelia!";
     router: any;
     configureRouter(config, router) {
         config.title = 'Welcome to Aurelia!';
