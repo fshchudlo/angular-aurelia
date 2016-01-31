@@ -1,5 +1,5 @@
 import {Component} from 'angular2/core';
-import {TestChildComponent} from './testChildComponent';
+import {TestChildComponent} from './test-сhild-сomponent';
 @Component({
     template: `
     <div class="sample-header">
@@ -11,5 +11,5 @@ import {TestChildComponent} from './testChildComponent';
 export class ComponentSample 
 {
     message: string = 'This is a component with child component sample';
-    messageForChild: string = 'Hello from child component!';
+    messageForChild: string = 'Hello to child component!';
 }
