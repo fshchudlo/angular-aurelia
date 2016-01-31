@@ -1,0 +1,81 @@
+<div class="sample-header">
+    <h1>This is an Angular 2 bindings sample</h1>
+</div>
+<div class="container">
+    <div class="panel panel-default">
+        <div class="panel-heading">String interpolation sample:</div>
+        <div class="panel-body">
+            This string is builted with {{interpolationString}} syntax
+        </div>
+    </div>
+</div>
+
+
+<div class="container">
+    <div class="panel panel-default">
+        <div class="panel-heading">To the DOM binding sample:</div>
+        <div class="panel-body">
+            This image src is binded with to-the-DOM binding:
+            <img [src]="iconUrl" style="width: 167px; height: 100px;" />
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="panel panel-default">
+        <div class="panel-heading">To the DOM binding sample:</div>
+        <div class="panel-body">
+            <div [class.alert-success]="isSuccess" class="alert" role="alert">This alert class binded with class binding</div>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="panel panel-default">
+        <div class="panel-heading">From the DOM binding sample:</div>
+        <div class="panel-body">
+            This button click handler binded with from-the-DOM binding:
+            <input type="button" class="btn" [class.btn-success]="!isButtonClicked" [class.btn-danger]="isButtonClicked" (click)="onClicked()"
+            [value]="isButtonClicked?'Don\'t click me!':'Click me!'" />
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="panel panel-default">
+        <div class="panel-heading">Both directions + ngIf bindings sample:</div>
+        <div class="panel-body">
+            <input type="text" [(ngModel)]="twoWayBindedProperty" placeholder="Type something" />
+            <div *ngIf="twoWayBindedProperty">
+                <div class="alert alert-success" role="alert" [textContent]="twoWayBindedProperty"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="panel panel-default">
+        <div class="panel-heading">NgFor + ngSwitch bindings sample:</div>
+        <div class="panel-body">
+            Select something:
+            <select [(ngModel)]="selectedClass">
+                <option *ngFor="#alertClass of alertClasses" [value]="alertClass">{{alertClass}}</option>
+            </select>
+            <div [ngSwitch]="selectedClass">
+                <template [ngSwitchWhen]="'success'">
+                    <div class="alert alert-success" role="alert">You will be successfull if you learn Angular</div>
+                </template>
+                <template [ngSwitchWhen]="'info'">
+                    <div class="alert alert-info" role="alert">You must learn angular right now</div>
+                </template>
+                <template [ngSwitchWhen]="'warning'">
+                    <div class="alert alert-warning" role="alert">Start learn Angular right now, or we will blow up your PC!</div>
+                </template>
+                <template [ngSwitchWhen]="'danger'">
+                    <div class="alert alert-danger" role="alert">You are in a creek!</div>
+                </template>
+                <template ngSwitchDefault>You must choose option</template>
+            </div>
+        </div>
+    </div>
+</div>

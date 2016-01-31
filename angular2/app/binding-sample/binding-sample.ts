@@ -1,8 +1,17 @@
 import {Component} from 'angular2/core';
 
-@Component({template: `<div class="sample-header">
-                        <h1>{{message}}</h1>
-                       </div>` })
-export class BindingSample {
-    message: string = 'This is a binding sample';
+@Component({templateUrl: 'app/binding-sample/binding-sample.html'})
+export class BindingSample 
+{
+    interpolationString: string = 'Interpolation';
+    iconUrl: string = 'https://angular.io/resources/images/logos/angular2/shield-with-beta.png';
+    isSuccess: boolean = true;
+    isButtonClicked: boolean = false;
+    twoWayBindedProperty: string = "";
+    alertClasses: string[] = ['', 'success', 'info', 'warning', 'danger'];
+    selectedClass: string = '';
+    onClicked()
+    {
+        this.isButtonClicked = !this.isButtonClicked;
+    }
 }
