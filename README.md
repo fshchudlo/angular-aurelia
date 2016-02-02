@@ -24,27 +24,27 @@ To run apps locally, follow these steps:
   npm install -g typescript
   ```
 5. Run angular2 app
-    1. From the angular2 folder under the project root, execute the following command:
+  1. From the angular2 folder under the project root, execute the following command:
 
-        ```shell
-        npm install
-        ```
-    2. From the same angular2 folder execute the following command:
+```shell
+npm install
+```
+  2. From the same angular2 folder execute the following command:
 
-        ```shell
-        npm start
-        ```
+```shell
+npm start
+```
 This will build the app and run http server to [http://localhost:3333](http://localhost:3333)
   
 6. Run aurelia app
-    1. From the aurelia folder under the project root, execute the following command:
+  1. From the aurelia folder under the project root, execute the following command:
 
-        ```shell
-        jspm install -y
-        ```
-    2. From the same aurelia folder execute the following command:
+```shell
+jspm install -y
+```
+  2. From the same aurelia folder execute the following command:
 
-        ```shell
-        npm start
-        ```
+```shell
+npm start
+```
 This will run http server to [http://localhost:4444](http://localhost:4444)
