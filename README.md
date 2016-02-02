@@ -3,8 +3,7 @@ This is a sample project for comparison of [Angular](https://angular.io/) and [A
 
 ## Running The Apps
 
-To run the apps locally, follow these steps:
-### Run apps
+To run apps locally, follow these steps:
 1. Ensure that [NodeJS](http://nodejs.org/) is installed. This provides the platform on which the build tooling runs.
 
 2. Ensure that [jspm](http://jspm.io/) is installed. If you need to install it, use the following command:
@@ -14,7 +13,7 @@ To run the apps locally, follow these steps:
   ```
   > **Note:** jspm queries GitHub to install semver packages, but GitHub has a rate limit on anonymous API requests. It is advised that you configure jspm with your GitHub credentials in order to avoid problems. You can do this by executing `jspm registry config github` and following the prompts.
 
-3. Ensure that [Http server](https://github.com/indexzero/http-server) is installed. This provides the server on which the app runs. If you need to install it, use the following command:
+3. Ensure that [http-server](https://github.com/indexzero/http-server) is installed. This provides the server on which the app runs. If you need to install it, use the following command:
 
 ```shell
   npm install -g http-server
@@ -30,7 +29,7 @@ To run the apps locally, follow these steps:
         ```shell
         npm install
         ```
-    2. From the same folder execute the following command:
+    2. From the same angular2 folder execute the following command:
 
         ```shell
         npm start
@@ -43,9 +42,9 @@ This will build the app and run http server to [http://localhost:3333](http://lo
         ```shell
         jspm install -y
         ```
-    2. From the same folder execute the following command:
+    2. From the same aurelia folder execute the following command:
 
         ```shell
         npm start
         ```
-This will run http server to [http://localhost:3333](http://localhost:4444)
+This will run http server to [http://localhost:4444](http://localhost:4444)
