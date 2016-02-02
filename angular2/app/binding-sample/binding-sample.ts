@@ -7,7 +7,7 @@ export class BindingSample
     iconUrl: string = 'https://angular.io/resources/images/logos/angular2/shield-with-beta.png';
     isSuccess: boolean = true;
     isButtonClicked: boolean = false;
-    twoWayBindedProperty: string = "";
+    twoWayBindedProperty: string = '';
     alertClasses: string[] = ['', 'success', 'info', 'warning', 'danger'];
     selectedClass: string = '';
     onClicked()
