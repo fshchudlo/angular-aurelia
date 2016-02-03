@@ -17,12 +17,12 @@
                 <div>
                     This image src is binded with one time binding:
                 </div>
-                <img src.one-time="oneTimeBindedProperty" />
+                <img src.one-time="iconUrl" />
                 <div>
                     You can try to change it via textbox, but it doesn't affect the image src
                 </div>
 
-                <input class="form-control" type="text" value.bind="oneTimeBindedProperty" />
+                <input class="form-control" type="text" value.bind="iconUrl" />
             </div>
         </div>
     </div>
@@ -34,11 +34,11 @@
                 <div>
                     This textbox is binded with two-way binding. Changing it affects second textbox:
                 </div>
-                <input class="form-control" type="text" value.two-way="oneWayBindedProperty" />
+                <input class="form-control" type="text" value.two-way="oneWaySampleProperty" />
                 <div>
                     This textbox is binded with one-way binding. Changing it doesn't affect first textbox:
                 </div>
-                <input class="form-control" type="text" value.one-way="oneWayBindedProperty" />
+                <input class="form-control" type="text" value.one-way="oneWaySampleProperty" />
             </div>
         </div>
     </div>

@@ -1,9 +1,8 @@
 export class BindingSample {
     interpolationString: string = 'Interpolation';
-    oneTimeBindedProperty: string = 'http://aurelia.io/images/main-logo.svg';
-    oneWayBindedProperty: string = '';
-
-
+    iconUrl: string = 'http://aurelia.io/images/main-logo.svg';
+    oneWaySampleProperty: string = '';
+    
     isSuccess: boolean = true;
     isButtonClicked: boolean = false;
     alertClasses: string[] = ['', 'success', 'info', 'warning', 'danger'];
