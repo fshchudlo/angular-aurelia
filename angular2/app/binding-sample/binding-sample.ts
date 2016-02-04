@@ -12,9 +12,11 @@ export class BindingSample
     twoWayBindedProperty: string = '';
     alertClasses: string[] = ['', 'success', 'info', 'warning', 'danger'];
     selectedClass: string = '';
-    
     onClicked()
     {
         this.isButtonClicked = !this.isButtonClicked;
+    }
+    displayTextboxValue(value) {
+        alert(value);
     }
 }

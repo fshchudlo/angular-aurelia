@@ -59,14 +59,16 @@
         <div class="panel-body">
             Select something:
             <select [(ngModel)]="selectedClass">
-                <option *ngFor="#alertClass of alertClasses" [value]="alertClass">{{alertClass}}</option>
+                <option *ngFor="#alertClass of alertClasses, #index=index" [value]="alertClass">{{index}} {{alertClass}}</option>
             </select>
+        </div>
+        <div class="panel-body">
             <div [ngSwitch]="selectedClass">
                 <template [ngSwitchWhen]="'success'">
                     <div class="alert alert-success" role="alert">You will be successfull if you learn Angular</div>
                 </template>
                 <template [ngSwitchWhen]="'info'">
-                    <div class="alert alert-info" role="alert">You must learn angular right now</div>
+                    <div class="alert alert-info" role="alert">You must learn Angular right now</div>
                 </template>
                 <template [ngSwitchWhen]="'warning'">
                     <div class="alert alert-warning" role="alert">Start learn Angular right now, or we will blow up your PC!</div>
@@ -76,6 +78,21 @@
                 </template>
                 <template ngSwitchDefault>You must choose option</template>
             </div>
+            <div *ngIf="selectedClass=='success'">
+                <div class="alert alert-success" role="alert">Extra message with *ngIf binding</div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="panel panel-default">
+        <div class="panel-heading">Referencing HTML element sample:</div>
+        <div class="panel-body">
+            <input #i placeholder="Type something">
+            <input type="button" class="btn btn-success" (click)="displayTextboxValue(i.value)" value="And click" />
+            <br/>
+            But templating doesn't work with it - {{i.value}}
         </div>
     </div>
 </div>

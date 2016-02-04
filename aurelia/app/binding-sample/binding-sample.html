@@ -17,11 +17,10 @@
                 <div>
                     This image src is binded with one time binding:
                 </div>
-                <img src.one-time="iconUrl" />
+                <img src.one-time="iconUrl" style="width: ${iconWidth}px; height: ${iconHeight}px;"/>
                 <div>
                     You can try to change it via textbox, but it doesn't affect the image src
                 </div>
-
                 <input class="form-control" type="text" value.bind="iconUrl" />
             </div>
         </div>
@@ -48,17 +47,48 @@
             <div class="panel-heading">Trigger vs delegate sample:</div>
             <div class="panel-body">
                 <div>
-                    This button is disabled, but the click handler will be called because event is <a target="_blank" href="https://davidwalsh.name/event-delegate">delegated</a> from the nested div:
+                    This button is disabled, but the click handler will be called because event is <a target="_blank" href="https://davidwalsh.name/event-delegate">delegated</a>                    from the nested div:
                 </div>
                 <button disabled click.delegate="onClicked($event)" class="btn" class.bind="isButtonClicked?'btn-danger':'btn-success'">
                     <div>Click me</div>
                 </button>
                 <div>
-                    This button is disabled, and the click handler will NOT be executed because event is attached via trigger binding directly to the button:
+                    This button is disabled, and the click handler will NOT be executed because event is attached via trigger binding directly
+                    to the button:
                 </div>
                 <button disabled click.trigger="onClicked($event)" class="btn" class.bind="isButtonClicked?'btn-danger':'btn-success'">
                     <div>Click me</div>
                 </button>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="panel panel-default">
+            <div class="panel-heading">repeat.for + if extensions sample:</div>
+            <div class="panel-body">
+                Select something:
+                <select value.bind="selectedClass">
+                    <option repeat.for="alertClass of alertClasses" value.bind="alertClass">${alertClass}</option>
+                </select>
+            </div>
+            <div class="panel-body">
+                <div if.bind="selectedClass=='success'" class="alert alert-success" role="alert">You will be successfull if you learn Aurelia</div>
+                <div if.bind="selectedClass=='info'" class="alert alert-info" role="alert">You must learn Aurelia right now</div>
+                <div if.bind="selectedClass=='alert'" class="alert alert-warning" role="alert">Start learn Aurelia right now, or we will blow up your PC!</div>
+                <div if.bind="selectedClass=='danger'" class="alert alert-danger" role="alert">You are in a creek!</div>
+                <div show.bind="selectedClass=='success'">
+                    <div class="alert alert-success" role="alert">Extra message with show extension</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="panel panel-default">
+            <div class="panel-heading">Referencing HTML element sample:</div>
+            <div class="panel-body">
+                <input ref="i" placeholder="Type something">
+                <input type="button" class="btn btn-success" click.delegate="displayTextboxValue(i.value)" value="And click" />
+                <br/> And templating work with it - ${i.value}
             </div>
         </div>
     </div>
