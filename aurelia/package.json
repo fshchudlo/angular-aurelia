@@ -16,7 +16,7 @@
   },
   
   "scripts": {
-    "start": "\"http-server -o -p 4444\""
+    "start": "http-server -o -p 4444"
   },
   
   "jspm": {
