@@ -1,5 +1,5 @@
 # angular-aurelia
-This is a sample project for comparison of [Angular](https://angular.io/) and [Aurelia](http://www.aurelia.io/) frameworks
+This is a sample project for comparison of [Angular](https://angular.io/) and [Aurelia](http://www.aurelia.io/) frameworks for [this article from habrahabr.ru](https://habrahabr.ru/post/276649/)
 
 ## Running The Apps
 
